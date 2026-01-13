@@ -16,6 +16,8 @@ from Filesystem import disk_usage as disk_usage_module
 from Filesystem import list_directory as list_directory_module
 from Filesystem import read_file as read_file_module
 from Filesystem import file_metadata as file_metadata_module
+from Filesystem import get_working_directory as get_working_directory_module
+from Filesystem import change_working_directory as change_working_directory_module
 from Networking import get_network_adapters as get_network_adapters_module
 from Networking import get_active_connections as get_active_connections_module
 from Networking import get_listening_ports as get_listening_ports_module
@@ -55,6 +57,10 @@ from System import get_installed_software as get_installed_software_module
 from System import get_system_uptime_info as get_system_uptime_info_module
 from System import get_user_info as get_user_info_module
 from System import get_system_paths as get_system_paths_module
+from Navigation import open_windows_settings as open_windows_settings_module
+from Navigation import launch_system_tool as launch_system_tool_module
+from Navigation import open_folder_in_explorer as open_folder_in_explorer_module
+from Navigation import reveal_file_in_explorer as reveal_file_in_explorer_module
 # Initialize FastMCP server
 mcp = FastMCP("WinSysMon")
 
@@ -99,6 +105,16 @@ def read_file(path: str) -> str:
 def file_metadata(path: str) -> str:
     """Retrieves file metadata."""
     return capture_stdout(file_metadata_module.file_metadata, path)
+
+@mcp.tool()
+def get_working_directory() -> str:
+    """Returns the current working directory (PWD)."""
+    return capture_stdout(get_working_directory_module.get_working_directory)
+
+@mcp.tool()
+def change_working_directory(path: str) -> str:
+    """Changes the current working directory (CD)."""
+    return capture_stdout(change_working_directory_module.change_working_directory, path)
 
 @mcp.tool()
 def get_network_adapters() -> str:
@@ -294,6 +310,26 @@ def get_user_info() -> str:
 def get_system_paths() -> str:
     """Retrieves important system paths and the PATH environment variable."""
     return capture_stdout(get_system_paths_module.get_system_paths)
+
+@mcp.tool()
+def open_windows_settings(uri: str) -> str:
+    """Opens a specific Windows Settings page. Common URIs: 'windowsupdate', 'apps-features', 'network-status', 'privacy', 'display', 'sound', 'notifications'."""
+    return capture_stdout(open_windows_settings_module.open_windows_settings, uri)
+
+@mcp.tool()
+def launch_system_tool(tool_name: str) -> str:
+    """Launches a system utility window. Allowed tools: 'taskmgr', 'eventvwr', 'services', 'control', 'regedit', 'compmgmt', 'sysdm', 'resmon'."""
+    return capture_stdout(launch_system_tool_module.launch_system_tool, tool_name)
+
+@mcp.tool()
+def open_folder_in_explorer(path: str) -> str:
+    """Opens a specific folder in Windows File Explorer."""
+    return capture_stdout(open_folder_in_explorer_module.open_folder_in_explorer, path)
+
+@mcp.tool()
+def reveal_file_in_explorer(path: str) -> str:
+    """Opens Windows File Explorer with the specified file selected/highlighted."""
+    return capture_stdout(reveal_file_in_explorer_module.reveal_file_in_explorer, path)
 
 if __name__ == "__main__":
     mcp.run()

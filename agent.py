@@ -38,7 +38,7 @@ async def run_agent():
             client = AsyncOpenAI()
 
             # Initialize chat history with a system prompt
-            messages = [{"role": "system", "content": "You are a helpful Windows System Monitor assistant. You can use tools to check system status."}]
+            messages = [{"role": "system", "content": "You are a helpful Windows System Monitor assistant. You can use tools to check system status. When you identify an issue, use the navigation tools to open the relevant Settings page or System Tool to guide the user to the fix."}]
 
             print("\n-------------------------------------------------------")
             print("\n-------------------------------------------------------")
