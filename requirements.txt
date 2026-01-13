@@ -1,0 +1,4 @@
+wmi
+mcp
+openai
+psutil

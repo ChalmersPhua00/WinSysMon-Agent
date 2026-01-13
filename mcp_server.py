@@ -50,8 +50,8 @@ from Registry import get_system_info_registry as get_system_info_registry_module
 from System import get_system_overview as get_system_overview_module
 from System import get_hardware_info as get_hardware_info_module
 from System import get_os_info as get_os_info_module
-'''from System import get_environment_vars as get_environment_vars_module
-from System import get_installed_software as get_installed_software_module'''
+from System import get_environment_vars as get_environment_vars_module
+from System import get_installed_software as get_installed_software_module
 from System import get_system_uptime_info as get_system_uptime_info_module
 from System import get_user_info as get_user_info_module
 from System import get_system_paths as get_system_paths_module
