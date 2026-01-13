@@ -10,6 +10,8 @@ if not exist "winsysmon_venv" (
 )
 REM Activate the environment
 call winsysmon_venv\Scripts\activate
+REM Upgrade pip
+python -m pip install --upgrade pip --quiet
 REM Install/Update dependencies
 if exist "requirements.txt" (pip install -r requirements.txt --quiet)
 REM Check for OpenAI Key

@@ -12,8 +12,11 @@ Instead of manually running PowerShell commands, checking Task Manager, users ca
 1. Clone the repository.
 2. Simply double-click `winsysmon.bat` to start using.
 
-<img width="1541" height="1078" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/e5258a3a-7cc7-4b87-9ef1-a73e38c63810" />
+#### Provides system-level observability
+<img width="1230" height="860" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/e5258a3a-7cc7-4b87-9ef1-a73e38c63810" />
 
-<img width="2370" height="520" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/9986e505-b0fe-4b70-b3ef-f9160077511d" />
+#### Guides you through navigating Windows settings
+<img width="1900" height="460" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/9986e505-b0fe-4b70-b3ef-f9160077511d" />
 
-<img width="2560" height="1012" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/72e016e6-acdf-4c99-a3ac-bb0d444d2291" />
+#### Pinpoints a folder’s location and opens it for you (may require a bit of patience)
+<img width="2050" height="810" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/72e016e6-acdf-4c99-a3ac-bb0d444d2291" />

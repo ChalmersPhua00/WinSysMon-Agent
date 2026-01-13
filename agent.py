@@ -1,5 +1,6 @@
 import asyncio
 import os
+import sys
 import json
 from openai import AsyncOpenAI
 from mcp import ClientSession, StdioServerParameters
@@ -7,8 +8,8 @@ from mcp.client.stdio import stdio_client
 
 # Define how to run your server
 server_params = StdioServerParameters(
-    command=r"c:\Users\chalm\Documents\WinSysMon\winsysmon_venv\Scripts\python.exe",
-    args=[r"c:\Users\chalm\Documents\WinSysMon\mcp_server.py"],
+    command=sys.executable,
+    args=[os.path.join(os.path.dirname(os.path.abspath(__file__)), "mcp_server.py")],
     env=os.environ.copy()
 )
 
