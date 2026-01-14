@@ -7,16 +7,17 @@ Instead of manually running PowerShell commands, checking Task Manager, users ca
 ## Requirements
 - Windows operating system  
 - OpenAI API key  
+- Python 3.11 and above
 
 ## Getting Started
 1. Clone the repository.
 2. Simply double-click `winsysmon.bat` to start using.
 
 #### Provides system-level observability
-<img width="1903" height="1334" alt="1" src="https://github.com/user-attachments/assets/fef6ef9a-a308-4d35-b1c2-c3876c979d8f" />
+<img width="1230" height="860" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/e5258a3a-7cc7-4b87-9ef1-a73e38c63810" />
 
 #### Guides you through navigating Windows settings
-<img width="3866" height="936" alt="2" src="https://github.com/user-attachments/assets/fa924262-8f46-432b-8e90-26b2f58b0b41" />
+<img width="1900" height="460" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/9986e505-b0fe-4b70-b3ef-f9160077511d" />
 
 #### Pinpoints a folder’s location and opens it for you (may require a bit of patience)
-<img width="2811" height="1116" alt="3" src="https://github.com/user-attachments/assets/77c41802-834d-4fe2-8781-0722f534f078" />
+<img width="2050" height="810" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/72e016e6-acdf-4c99-a3ac-bb0d444d2291" />
